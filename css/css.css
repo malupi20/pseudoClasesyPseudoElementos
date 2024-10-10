@@ -7,6 +7,7 @@ body{
     margin: 0;
     padding: 0;
     
+    
 }
 section {
     border: 5px solid rgb(140, 0, 255);
@@ -71,3 +72,76 @@ section {
 :dir(rtl) {
     background-color: powderblue;
   }
+
+  /*DISABLES*/
+  input[type="text"]:disabled {
+    background: #ccc;
+  }
+
+  /*EMPTY*/
+  .box {
+    background: rgb(90, 185, 252);
+    height: 80px;
+    width: 80px;
+    
+  }
+  
+  .box:empty {
+    background: lime;
+    
+  }
+
+  /*ENABLED*/
+  input:enabled {
+    color: rgb(0, 0, 0);
+  }
+  
+  input:disabled {
+    color: #aaa;
+  }
+
+  /*FIRST*/
+  @page :first {
+    margin-left: 50%;
+    margin-top: 50%;
+  }
+  
+  p {
+    page-break-after: always;
+  }
+
+  /*FIRST-CHILD*/
+  p:first-child {
+    color: lime;
+    background-color: black;
+    padding: 5px;
+  }
+
+  /*FIRST-OF-TYPE*/
+  article :first-of-type {
+    background-color: pink;
+  }
+
+
+  /*FULLSCREEN*/
+  #fullscreen:fullscreen {
+    padding: 42px;
+    background-color: pink;
+    border: 2px solid #f00;
+    font-size: 200%;
+  }
+  
+  #fullscreen:fullscreen > h1 {
+    color: red;
+  }
+  
+  #fullscreen:fullscreen > p {
+    color: darkred;
+  }
+  
+  #fullscreen:fullscreen > button {
+    display: none;
+  }
+  
+
+  
