@@ -1,0 +1,305 @@
+*{
+    box-sizing: border-box;
+    background-color: rgb(226, 179, 247);
+}
+:root {
+  --main-color: #3498db; /* Variable CSS */
+  --font-size: 16px;     /* Variable CSS */
+}
+body{
+    background-color: rgb(6, 248, 248);
+    margin: 0;
+    padding: 0;   
+}
+nav {
+  background-color: rgba(68, 47, 82, 0.986);
+  padding: 9px;
+  margin: 7px;
+  border-style: double; color: aliceblue; 
+  border-radius: 12px;
+  text-align: center;
+}
+nav a{
+  font-size: 20px;
+  font-style: inherit;
+  background-color: rgb(189, 160, 206);
+  padding: 5px 80px;
+  margin: 40px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  border-style: double; color: rgb(85, 67, 97);
+}
+
+
+section {
+    border: 5px solid rgb(140, 0, 255);
+  }
+  /*ACA EMPIEZA MARI*/
+/*HOVER*/
+.soyBoton{
+    color: blueviolet;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+.soyBoton:hover{
+    color: chartreuse;
+    background-color: blueviolet;
+    padding: 10px;
+    font-size: 30px;   
+}
+
+/*ACTIVE*/
+.soyActive{
+    color: rgb(94, 175, 196);
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+.soyActive:active {
+    color: lime;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    
+  } 
+
+  
+  /*CHECKED*/
+  .margenAbajo{
+    margin-bottom: 90px;
+  }
+  
+  input:checked + label {
+    color: rgb(0, 224, 67);
+  }
+  option:checked {
+    box-shadow: 0 0 0 3px rgb(241, 16, 35);
+    color: rgb(0, 225, 255);
+    padding: 10px;
+  }
+  
+  /*DEFAULT*/
+  input:default + label {
+    color: rgb(132, 0, 255);
+  }
+
+  /*DIR()*/
+:dir(rtl) {
+    background-color: powderblue;
+  }
+
+  /*DISABLES*/
+  input[type="text"]:disabled {
+    background: #ccc;
+  }
+
+  /*EMPTY*/
+  .box {
+    background: rgb(90, 185, 252);
+    height: 80px;
+    width: 80px;
+    margin: 15;
+  }
+  
+  .box:empty {
+    background: lime;
+    
+  }
+
+  /*ENABLED*/
+  input:enabled {
+    color: rgb(0, 0, 0);
+  }
+  
+  input:disabled {
+    color: #aaa;
+  }
+
+  /*FIRST*/
+  @page :first {
+    margin-left: 50%;
+    margin-top: 50%;
+  }
+  
+  p {
+    page-break-after: always;
+  }
+
+  /*FIRST-CHILD*/
+  p:first-child {
+    color: lime;
+    background-color: black;
+    padding: 5px;
+  }
+
+  /*FIRST-OF-TYPE*/
+  article :first-of-type {
+    background-color: pink;
+  }
+
+
+  /*FULLSCREEN*/
+  #fullscreen:fullscreen {
+    padding: 42px;
+    background-color: pink;
+    border: 2px solid #f00;
+    font-size: 200%;
+  }
+  
+  #fullscreen:fullscreen > h1 {
+    color: red;
+  }
+  
+  #fullscreen:fullscreen > p {
+    color: darkred;
+  }
+  
+  #fullscreen:fullscreen > button {
+    display: none;
+  }
+
+
+  /*ACA EMPIEZA BRI*/
+
+  
+p:nth-last-of-type(1){
+    color: rgb(121, 98, 143);
+      font-size: 20px;
+      justify-content: center;
+      display: flex;
+}
+p:nth-last-of-type(2){
+    color: rgb(0, 0, 0);
+      font-size: 20px;
+      justify-content: center;
+      display: flex;
+}
+p:nth-last-of-type(3){
+    color: rgb(87, 41, 128);
+      font-size: 20px;
+      justify-content: center;
+      display: flex;
+}
+
+
+.cajaDos p:nth-of-type(1){
+     color: rgb(166, 168, 16);
+      font-size: 20px;
+      justify-content: center;
+      display: flex;
+}
+.cajaDos p:nth-of-type(2){
+    color: rgb(27, 73, 94);
+     font-size: 20px;
+     justify-content: center;
+     display: flex;
+}
+.cajaDos p:nth-of-type(3){
+    color: rgb(119, 37, 22);
+     font-size: 20px;
+     justify-content: center;
+     display: flex;
+}
+.cajaDos{
+    border: 3px solid rgb(71, 40, 71);
+}
+h2 {
+     font-size: 20px;
+     justify-content: center;
+     display: flex;
+}
+.cajaTres{
+    border: 3px solid rgb(71, 40, 71);
+}
+.cajaTres p:only-child {
+    color: rgb(245, 19, 19);
+    font-size: 18px;
+    justify-content: center;
+    display: flex;
+}
+.cajaTres p{
+    font-size: 18px;
+    justify-content: center;
+    display: flex;
+}  
+.cajaCuatro p:only-of-type{
+    color: rgb(59, 59, 100);
+    background-color: plum ;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+}
+.cajaCuatro{
+    border: 3px solid rgb(71, 40, 71);
+}
+input:optional {
+    border: 2px solid rgba(97, 40, 163, 0.671);
+    background-color: #c880d16c;
+    justify-content: center;
+    display: flex;
+}
+input:required {
+    border: 2px solid rgba(155, 105, 211, 0.671);
+    background-color: #755d916c;
+    justify-content: center;
+    display: flex;
+}
+.cajaCinco {
+    border: 3px solid rgb(71, 40, 71);
+}
+.cajaCincoYMedio {
+    border: 3px solid rgb(71, 40, 71);
+}
+input:in-range {
+    border: 2px solid rgb(66, 23, 80);
+    justify-content: center;
+    display: flex;
+    justify-items: center;
+  }
+  input:out-of-range {
+    border: 2px solid rgba(63, 48, 75, 0.651);
+    background-color: #ffe6e6;
+    justify-content: center;
+    display: flex;
+    justify-items: center;
+  }
+  .cajaSeis {
+    border: 3px solid rgb(71, 40, 71);
+  }
+  input:read-only {
+    background-color: #f0f0f0;
+    color: gray;
+    border: 2px dashed #ccc;
+    justify-content: center;
+    display: flex;
+  }
+  [contenteditable="true"] {
+    background-color: lightyellow; /* Estilo para el elemento editable */
+    justify-content: center;
+    display: flex;
+}
+@page :right {
+  margin: 2in 3in;
+  background-color: rgb(84, 57, 97);
+}
+.cajaSiete {
+    border: 3px solid rgb(71, 40, 71);
+}
+.cajaOcho {
+    border: 3px solid rgb(71, 40, 71);
+}
+.cajaNueve {
+    border: 3px solid rgb(71, 40, 71);
+}
+.cajaDiez {
+    border: 3px solid rgb(71, 40, 71);
+}
+.cajaOnce {
+    border: 3px solid rgb(71, 40, 71);
+}
