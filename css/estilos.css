@@ -132,11 +132,11 @@ section {
   }
 
   /*FIRST-CHILD*/
-  p:first-child {
-    color: lime;
-    background-color: black;
-    padding: 5px;
-  }
+ p:first-child {
+  color: lime;
+  background-color: black;
+  padding: 5px;
+}
 
   /*FIRST-OF-TYPE*/
   article :first-of-type {
@@ -164,6 +164,260 @@ section {
     display: none;
   }
 
+  /*FOCUS*/
+  .red-input:focus {
+    background: yellow;
+    color: red;
+  }
+  
+  .blue-input:focus {
+    background: yellow;
+    color: blue;
+  }
+
+  /*INDETERMINATE*/
+  input:indeterminate + label {
+    background: lime;
+  }
+
+  /*IN-RANGE*/
+  li {
+    list-style: none;
+    margin-bottom: 1em;
+  }
+  
+  input {
+    border: 1px solid black;
+  }
+  
+  input:in-range {
+    background-color: rgba(0, 255, 0, 0.25);
+  }
+  
+  input:out-of-range {
+    background-color: rgba(255, 0, 0, 0.25);
+    border: 2px solid red;
+  }
+  
+  input:in-range + label::after {
+    content: "bien.";
+  }
+  
+  input:out-of-range + label::after {
+    content: "fuera de rango!";
+  }
+
+  /*INVALID*/
+  input:invalid {
+    background-color: #ffdddd;
+  }
+  
+  form:invalid {
+    border: 5px solid #ffdddd;
+  }
+  
+  input:valid {
+    background-color: #ddffdd;
+  }
+  
+  form:valid {
+    border: 5px solid #ddffdd;
+  }
+  
+  input:required {
+    border-color: #800000;
+    border-width: 3px;
+  }
+  
+  input:required:invalid {
+    border-color: #c00000;
+  }
+
+
+
+  /*LANG*/
+  :lang(en) > q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+  :lang(fr) > q {
+    quotes: "« " " »";
+  }
+  :lang(de) > q {
+    quotes: "»" "«" "\2039" "\203A";
+  }
+  /*LAST-CHILD*/
+
+  p:last-child {
+    color: lime;
+    background-color: black;
+    padding: 5px;
+  }
+
+  /*LAST-OF-TYPE*/
+  p:last-of-type {
+    color: red;
+    font-style: italic;
+  }
+
+/*LEFT*/
+@page :left {
+  margin: 2in 3in;
+}
+
+/*LINK*/
+
+a:link {
+  background-color: gold;
+  color: green;
+}
+
+/*NOT()*/
+.fancy {
+  text-shadow: 2px 2px 3px gold;
+}
+
+/* elementos <p> que no están en la clase `.fancy` */
+p:not(.fancy) {
+  color: green;
+}
+
+/* Elementos que no son elementos <div> o <span> */
+.body :not(div):not(span) {
+  font-weight: bold;
+}
+
+/* Elementos que no son `.crazy` o `.fancy` */
+.fancy {
+  text-shadow: 2px 2px 3px gold;
+}
+
+/* elementos <p> que no están en la clase `.fancy` */
+.p:not(.fancy) {
+  color: green;
+}
+
+/* Elementos que no son elementos <p> */
+.body :not(p) {
+  text-decoration: underline;
+}
+
+/* Elementos que no son elementos <div> o <span> */
+.body :not(div):not(span) {
+  font-weight: bold;
+}
+
+/* Elementos que no son `.crazy` o `.fancy` */
+
+
+
+ /*NTH-CHILD()*/
+ html {
+  font-family: sans-serif;
+}
+
+span,
+div em {
+  padding: 5px;
+  border: 1px solid green;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.first span:nth-child(2n + 1),
+.second span:nth-child(2n + 1),
+.third span:nth-of-type(2n + 1) {
+  background-color: lime;
+}
+
+
+ /*NTH-LAST-CHILD()*/
+ table {
+  border: 1px solid blue;
+}
+
+/* Selecciona los últimos tres elementos */
+tr:nth-last-child(-n + 3) {
+  background-color: pink;
+}
+
+/* Toma todos los elementos a partir del penúltimo elemento */
+tr:nth-last-child(n + 2) {
+  color: blue;
+}
+
+/* Seleccione solo el penúltimo elemento */
+tr:nth-last-child(2) {
+  font-weight: 600;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /*ACA EMPIEZA BRI*/
 
@@ -175,7 +429,7 @@ p:nth-last-of-type(1){
       display: flex;
 }
 p:nth-last-of-type(2){
-    color: rgb(0, 0, 0);
+    
       font-size: 20px;
       justify-content: center;
       display: flex;
@@ -206,17 +460,13 @@ p:nth-last-of-type(3){
      justify-content: center;
      display: flex;
 }
-.cajaDos{
-    border: 3px solid rgb(71, 40, 71);
-}
+
 h2 {
      font-size: 20px;
      justify-content: center;
      display: flex;
 }
-.cajaTres{
-    border: 3px solid rgb(71, 40, 71);
-}
+
 .cajaTres p:only-child {
     color: rgb(245, 19, 19);
     font-size: 18px;
@@ -235,9 +485,7 @@ h2 {
     justify-content: center;
     display: flex;
 }
-.cajaCuatro{
-    border: 3px solid rgb(71, 40, 71);
-}
+
 input:optional {
     border: 2px solid rgba(97, 40, 163, 0.671);
     background-color: #c880d16c;
@@ -250,9 +498,7 @@ input:required {
     justify-content: center;
     display: flex;
 }
-.cajaCinco {
-    border: 3px solid rgb(71, 40, 71);
-}
+
 .cajaCincoYMedio {
     border: 3px solid rgb(71, 40, 71);
 }
@@ -269,9 +515,9 @@ input:in-range {
     display: flex;
     justify-items: center;
   }
-  .cajaSeis {
-    border: 3px solid rgb(71, 40, 71);
-  }
+.cajaCinco {
+  border: 3px solid rgb(71, 40, 71);
+}
   input:read-only {
     background-color: #f0f0f0;
     color: gray;
@@ -280,7 +526,7 @@ input:in-range {
     display: flex;
   }
   [contenteditable="true"] {
-    background-color: lightyellow; /* Estilo para el elemento editable */
+    background-color: rgb(241, 241, 217); /* Estilo para el elemento editable */
     justify-content: center;
     display: flex;
 }
@@ -293,13 +539,4 @@ input:in-range {
 }
 .cajaOcho {
     border: 3px solid rgb(71, 40, 71);
-}
-.cajaNueve {
-    border: 3px solid rgb(71, 40, 71);
-}
-.cajaDiez {
-    border: 3px solid rgb(71, 40, 71);
-}
-.cajaOnce {
-    border: 3px solid rgb(71, 40, 71);
 }

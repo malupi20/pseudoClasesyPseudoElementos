@@ -25,3 +25,10 @@ document.addEventListener(
   document.querySelector("button").onclick = function () {
     window.print();
   };
+
+  //ESTO ES INDETERMINATE
+  var inputs = document.getElementsByTagName("input");
+
+for (var i = 0; i < inputs.length; i++) {
+  inputs[i].indeterminate = true;
+}

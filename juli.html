@@ -37,63 +37,219 @@
                 
         
 
+            <!--ACA EMPIEZA FOCUS-->
             <section class="col-3">
                 <h2 class="display-4 text-center">FOCUS</h2>
                 
+                <input class="red-input" value="Voy a ser de color rojo cuando enfoque." /><br />
+                <input class="blue-input" value="Voy a ser de color azul cuando enfoque." />
             </section>
 
+            <!--ACA EMPIEZA INDETERMINATE-->
             <section class="col-3">
                 <h2 class="display-4 text-center">INDETERMINATE</h2>
-                
+                <div>
+                    <input type="checkbox" id="checkbox" />
+                    <label for="checkbox">Esta etiqueta comienza con el color lima.</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="radio" />
+                    <label for="radio">Esta etiqueta comienza con el color lima.</label>
+                  </div>
             </section>
 
+            <!--ACA EMPIEZA IN-RANGE-->
             <section class="col-3 text-center">
                 <h2 class="display-4 text-center">IN-RANGE</h2>
+                <form action="" id="form1">
+                    <ul>
+                      Los valores entre 1 y 10 son válidos.
+                      <li>
+                        <input
+                          id="value1"
+                          name="value1"
+                          type="number"
+                          placeholder="1 a 10"
+                          min="1"
+                          max="10"
+                          value="12" />
+                        <label for="value1">Tu valor esta </label>
+                      </li>
+                    </ul>
+                  </form>
                 
             </section>
 
+            <!--ACA EMPIEZA INVALID-->
             <section class="col-3">
                 <h2 class="display-4 text-center">INVALID</h2>
 
+                <form>
+                    <label for="url_input">Ingresa una URL:</label>
+                    <input type="url" id="url_input" />
+                    <br />
+                    <br />
+                    <label for="email_input"
+                      >Introduzca una dirección de correo electrónico:</label
+                    >
+                    <input type="email" id="email_input" required />
+                  </form>
             </section>
 
+            <!--ACA EMPIEZA LANG()-->
             <section class="col-3"><h2 class="display-4 text-center">LANG()</h2>
-                
+                <div lang="en">
+                    <q>Esta cita en inglés tiene una cita <q>anidada</q> adentro.</q>
+                  </div>
+                  <div lang="fr">
+                    <q>Esta cita en francés tiene una cita <q>anidada</q> adentro.</q>
+                  </div>
+                  <div lang="de">
+                    <q>Esta cita en aleman tiene una cita <q>anidada</q> adentro.</q>
+                  </div>
             </section>
 
+            <!--ACA EMPIEZA LAST-CHILD-->
             <section class="col-3">
                 <h2 class="display-4 text-center">LAST-CHILD</h2>
 
+                <div>
+                    <p>Este texto no está seleccionado.</p>
+                    <p>¡Este texto está seleccionado!</p>
+                  </div>
+                  
+                  <div>
+                    <p>Este texto no está seleccionado.</p>
+                    <h2>Este texto no está seleccionado: no es un `p`.</h2>
+                  </div>
             </section>
 
+            <!--ACA EMPIEZA LAST-OF-TYPE-->
             <section class="col-3">
                 <h2 class="display-4 text-center">LAST-OF-TYPE</h2>
 
+                <h2>Título</h2>
+                <p>Párrafo 1</p>
+                <p>Párrafo 2</p>
             </section>
 
+            <!--ACA EMPIEZA LEFT-->
             <section class="col-3">
                 <h2 class="display-4 text-center">LEFT</h2>
-
+                <P>@page :left {
+                    margin: 2in 3in;
+                  }</P>
+                  <h4> representa todas las páginas de la izquierda de un documento impreso.</h4>
+                  
             </section>
+        
 
+            <!--ACA EMPIEZA LINK-->
             <section class="col-3">
                 <h2 class="display-4 text-center">LINK</h2>
-
+                <a href="#ordinary-target">Este es un enlace ordinario.</a><br />
+                <a href="">Ya has visitado este enlace.</a><br />
+                <a>Enlace de marcador de posición (no se personalizará)</a>
             </section>
 
+<!--ACA EMPIEZA NOT()-->
             <section class="col-3">
+                <div class="caja">
                 <h2 class="display-4 text-center">NOT()</h2>
-
+                <p>Soy un párrafo.</p>
+                <p class="fancy">¡Soy muy elegante!</p>
+                <div class="text-center">NO soy un párrafo.</div>
+                </div>
             </section>
 
+            <!--ACA EMPIEZA NTH-CHILD()-->
             <section class="col-3">
                 <h2 class="display-4 text-center">NTH-CHILD()</h2>
-
+                <h3>
+                    <code>span:nth-child(2n+1)</code>, SIN un <code>&lt;em&gt;</code> entre los
+                    hijos.
+                  </h3>
+                  <p>Los hijos 1, 3, 5 y 7 son seleccionados.</p>
+                  <div class="first">
+                    <span>Span 1!</span>
+                    <span>Span 2</span>
+                    <span>Span 3!</span>
+                    <span>Span 4</span>
+                    <span>Span 5!</span>
+                    <span>Span 6</span>
+                    <span>Span 7!</span>
+                  </div>
+                  
+                  <br />
+                  
+                  <h3>
+                    <code>span:nth-child(2n+1)</code>, CON un <code>&lt;em&gt;</code> entre los
+                    hijos.
+                  </h3>
+                  <p>
+                    Los hijos 1, 5 y 7 son seleccionados.<br />
+                    3 se usa en el conteo porque es un hijo, pero no se selecciona porque no es un
+                    <code>&lt;span&gt;</code>.
+                  </p>
+                  <div class="second">
+                    <span>Span!</span>
+                    <span>Span</span>
+                    <em>Este es un `em`.</em>
+                    <span>Span</span>
+                    <span>Span!</span>
+                    <span>Span</span>
+                    <span>Span!</span>
+                    <span>Span</span>
+                  </div>
+                  
+                  <br />
+                  
+                  <h3>
+                    <code>span:nth-of-type(2n+1)</code>, CON un <code>&lt;em&gt;</code> entre los
+                    hijos.
+                  </h3>
+                  <p>
+                    Los hijos 1, 4, 6 y 8 son seleccionados.<br />
+                    3 no se usa en el conteo ni se selecciona porque es un
+                    (code)&lt;em&gt;(/code), no un (code)&lt;span&gt;(/code), y
+                    (code)nth-of-type(/code) solo selecciona hijos de ese tipo. El
+                    (code)&lt;em&gt;(/code) se omite por completo y se ignora.
+                  </p>
+                  <div class="third">
+                    <span>Span!</span>
+                    <span>Span</span>
+                    <em>Este es un `em`.</em>
+                    <span>Span!</span>
+                    <span>Span</span>
+                    <span>Span!</span>
+                    <span>Span</span>
+                    <span>Span!</span>
+                  </div>
             </section>
 
+            <!--ACA EMPIEZA NTH-LAST-CHILD()-->
             <section class="col-3">
                 <h2 class="display-4 text-center">NTH-LAST-CHILD()</h2>
-
+                <table>
+                    <tbody>
+                      <tr>
+                        <td>Primera línea</td>
+                      </tr>
+                      <tr>
+                        <td>Segunda línea</td>
+                      </tr>
+                      <tr>
+                        <td>Tercera línea</td>
+                      </tr>
+                      <tr>
+                        <td>Cuarta línea</td>
+                      </tr>
+                      <tr>
+                        <td>Quinta línea</td>
+                      </tr>
+                    </tbody>
+                  </table>
+        
             </section>
             
 
